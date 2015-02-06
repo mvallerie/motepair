@@ -86,8 +86,6 @@ class EventHandler
 
 
       @subscriptions.add editor.onDidChangeSelectionRange (event) =>
-        return if Point.fromObject(event.newScreenRange.start).isEqual(Point.fromObject(event.newScreenRange.end))
-
         data = {
           a: 'meta',
           type: 'select',
